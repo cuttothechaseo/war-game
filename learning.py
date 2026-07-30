@@ -29,8 +29,19 @@ def lesson_03_lists():
     print(drinks)
 
 
+def lesson_04_list_methods():
+    cosmetics = ["Toothbrush", "Razor", "Deoderant", "Gel"]
+    print(cosmetics)  # initial list
+    cosmetics_packed = cosmetics.pop()  # remove last item from list
+    print(cosmetics_packed)  # item removed
+    print(cosmetics)  # shrunken list
+    cosmetics_packed = cosmetics.pop(0)  # remove first item from list
+    print(cosmetics_packed)  # item removed
+    print(cosmetics)  # shrunken list
+
+
 def main():
-    lesson_03_lists()
+    lesson_04_list_methods()
 
 
 if __name__ == "__main__":
