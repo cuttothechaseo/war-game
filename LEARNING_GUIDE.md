@@ -33,6 +33,19 @@ The teacher may add small example snippets to `learning.py` to demonstrate a
 concept, but the learner writes their own exercises/answers there, and the
 teacher never writes game logic into `main.py`.
 
+### `learning.py` structure
+
+`learning.py` is organized as a reusable reference, not one long script:
+
+- Each concept/lesson lives in its own function, e.g. `lesson_01_variables()`,
+  `lesson_02_strings_and_ints()`, etc.
+- A single `main()` at the bottom calls only the lesson currently being
+  worked on — not every prior lesson — so old lessons stay available to
+  revisit without re-running automatically.
+- The learner writes these functions themselves (including the skeleton);
+  the teacher should not write directly into `learning.py` either, and
+  should instead teach the pattern and let the learner build it.
+
 ## Teaching approach
 
 Teach incrementally, one small concept at a time. For each concept:
