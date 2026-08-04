@@ -40,8 +40,17 @@ def lesson_04_list_methods():
     print(cosmetics)  # shrunken list
 
 
+def lesson_05_tuples():
+    person = ("Chase", 28)
+    print(person[0], person[1])
+
+    name, age = person
+    print(name)
+    print(age)
+
+
 def main():
-    lesson_04_list_methods()
+    lesson_05_tuples()
 
 
 if __name__ == "__main__":
