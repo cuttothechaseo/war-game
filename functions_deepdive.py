@@ -9,7 +9,7 @@ def display_book(title, label):  # title = future string, label = label stores t
     print(f"{title} - {label}")
 
 
-def process_books(books):  # parameter = books (returns the whole list)
+def process_books(books):  # books contains the whole list of book dictionaries
     for book in books:
         page_count = book["pages"]  # page_count contains only the integer
         label = classify_length(page_count)
