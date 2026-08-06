@@ -7,7 +7,7 @@ def classify_temp(temp):  # classifier function
         return "Cool"
 
 
-def display_places(name, label):
+def display_place(name, label):
     print(f"{name} - {label}")
 
 
@@ -17,7 +17,7 @@ def process_temp(places):
         label = classify_temp(temp)
         name = place["area"]
 
-        display_places(name, label)
+        display_place(name, label)
 
 
 def main():
