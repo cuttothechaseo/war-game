@@ -16,29 +16,30 @@ def deal_deck(player_1, player_2):
 
 
 # Play Round Function
-def play_round(player_1, player_2):  ## This Function is Wrong - Need to Fix
-    card_1 = player_1[0]
-    card_2 = player_2[0]
-
-    while card_1 > card_2 or card_1 < card_2:
-        player_1.pop(0)
-        player_2.pop(0)
-
-    if card_1 > card_2:
-        player_1.extend(player_1[0])
-        player_1.extend(player_2[0])
-    elif card_1 < card_2:
-        player_2.extend(player_2[0])
-        player_2.extend(player_1[0])
+def play_round(player_1, player_2):
+    if player_1[0] > player_2[0]:
+        player_1.pop()
+        player_2.pop()
+        player_1.append(player_2[0])
+        player_1.append(player_1[0])
+    elif player_1[0] < player_2[0]:
+        player_1.pop()
+        player_2.pop()
+        player_2.append(player_1[0])
+        player_2.append(player_2[0])
     else:
-        ...
+        ...  # War Case Scenario
 
 
 # War Case Scenario Function
 
 
 # Game Loop Function
-def play_war(player_1, player_2): ...
+def play_war(player_1, player_2):
+    if len(player_1) == 0:
+        print("Game Over - Player 2 Won")
+    elif len(player_2) == 0:
+        print("Game Over - Player 1 Won")
 
 
 def main():
@@ -46,6 +47,9 @@ def main():
     player_2 = []
     deal_deck(player_1, player_2)
     play_round(player_1, player_2)
+    play_war(player_1, player_2)
+    print(len(player_1))
+    print(len(player_2))
 
 
 if __name__ == "__main__":
